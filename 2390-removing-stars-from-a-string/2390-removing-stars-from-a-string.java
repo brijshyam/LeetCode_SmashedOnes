@@ -8,11 +8,12 @@ class Solution {
                 st.push(ch);
             }
         }
-        String str="";
+        // String str="";
+        StringBuilder sb= new StringBuilder();
         while(!st.isEmpty()){
-            str=st.pop()+str;
+            sb.insert(0, st.pop());
         }
-        return str;
+        return String.valueOf(sb);
         
     }
 }
