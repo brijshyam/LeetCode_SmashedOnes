@@ -18,17 +18,17 @@ class Solution {
         List<Integer> list = new LinkedList<Integer> ();
         if(root== null )
             return list;
-        helper( root, list);
+        inOrderHelper( root, list);
         
         return list;
     }
     
-    public void helper(TreeNode root, List<Integer> list){
+    public void inOrderHelper(TreeNode root, List<Integer> list){
         if(root==null)
             return ;
-        helper(root.left, list);
+        inOrderHelper(root.left, list);
         list.add(root.val);
-        helper(root.right, list);
+        inOrderHelper(root.right, list);
         
         return;
     }
