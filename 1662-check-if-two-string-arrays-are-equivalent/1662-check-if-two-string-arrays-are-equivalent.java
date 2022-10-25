@@ -10,11 +10,10 @@ class Solution {
             sb2.append(s);
         }
         // System.out.print(sb1+" "+sb2);
-        String str1 =sb1.toString();
-        String str2 = sb2.toString();
-        if(str1.equals(str2))
+        // String str1 =sb1.toString();
+        // String str2 = sb2.toString();
+        if(sb1.toString().equals(sb2.toString()))
             return true;
-        else 
-            return false;
+        return false;
     }
 }
