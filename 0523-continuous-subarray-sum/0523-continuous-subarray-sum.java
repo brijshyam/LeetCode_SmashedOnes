@@ -1,20 +1,20 @@
 class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
-        HashSet<Integer> set = new HashSet<>();
-        int currsum = 0;
-        int prevsum = 0;
-        for(int j = 0; j<nums.length; j++){
-            currsum += nums[j];
-            if(set.contains(currsum%k)){
+        Map<Integer,Integer> map=new HashMap<>();
+        map.put(0,-1);
+        int sum=0;
+        for(int i=0;i<nums.length;i++){
+            sum+=nums[i];
+            sum%=k;
+            Integer last=map.get(sum);
+            if(last!=null ) {
+                if(i-last>1)
                 return true;
+                else continue;  
             }
-            // point 1
-            currsum %= k;
-            
-            //point 2
-            set.add(prevsum);
-            prevsum = currsum;
+            map.put(sum,i);
         }
+        
         return false;
     }
 }
