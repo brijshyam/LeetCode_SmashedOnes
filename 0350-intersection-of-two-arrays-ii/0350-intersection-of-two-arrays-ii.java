@@ -29,10 +29,9 @@ class Solution {
                 }
             }
         }
-        Object [] o = list.toArray();
         int [] res = new int[list.size()];
-        for(int i =0; i<o.length; i++){
-            res[i]= (int)o[i];
+        for(int i =0; i<list.size(); i++){
+            res[i]= list.get(i);
         }
             
         return res;
