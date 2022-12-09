@@ -14,7 +14,7 @@ class Solution {
         // return mid ;
         
         while(first<=last ){
-            int mid = (first +last)/2;
+            int mid = last -(last-first )/2;
             if(mid<arr.length && target> arr[mid]){
                 first = mid+1; 
                 
