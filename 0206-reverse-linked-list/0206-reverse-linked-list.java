@@ -20,6 +20,7 @@ class Solution {
             current = next;
         }
         head = prev;
+            
         return head;
         
     }
