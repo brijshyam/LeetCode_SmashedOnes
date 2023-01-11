@@ -22,17 +22,17 @@ class Solution {
         
         ListNode res= l1; 
         while(l1!=null && l2!= null){
-            ListNode t =null; 
+            ListNode temp1 =null; 
             while(l1!= null && l1.val<=l2.val){
-                t =l1; 
+                temp1 =l1; 
                 l1= l1.next; 
             }
-            t.next = l2;
+            temp1.next = l2;
             
             //swap 
-            ListNode t2 =l1;
+            ListNode temp2 =l1;
             l1= l2;
-            l2=t2;
+            l2=temp2;
         }
         
         return res;
