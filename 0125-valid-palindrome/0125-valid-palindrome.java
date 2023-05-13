@@ -6,19 +6,12 @@ class Solution {
         
     }
     
-    public static boolean checkPal(String str) {
-        int l = 0;
-        int r = str.length() - 1;
-
-        while (l <=r) {
-            if (str.charAt(l) != str.charAt(r)) {
-                return false;
-            }
-
-            l++;
-            r--;
-        }
-
+    public static boolean checkPal (String str){
+    if (str.length() <= 1) {
         return true;
     }
+
+    return str.charAt(0) == str.charAt(str.length() - 1) && checkPal(str.substring(1, str.length() - 1));
+}
+
 }
